@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".eventdispatch.EventDispatchActivity"/>
+        <activity android:name=".eventdispatch.EventDispatchActivity1"/>
     </application>
 
 </manifest>

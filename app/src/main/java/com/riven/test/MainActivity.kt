@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.riven.test.eventdispatch.EventDispatchActivity
+import com.riven.test.eventdispatch.EventDispatchActivity1
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,5 +15,10 @@ class MainActivity : AppCompatActivity() {
         event_dispatch.setOnClickListener {
             startActivity(Intent(MainActivity@this,EventDispatchActivity::class.java));
         }
+
+        event_dispatch1.setOnClickListener {
+            startActivity(Intent(MainActivity@this, EventDispatchActivity1::class.java));
+        }
+
     }
 }
