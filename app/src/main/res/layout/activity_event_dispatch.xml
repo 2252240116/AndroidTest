@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.riven.test.eventdispatch.ViewGroupAAA
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.riven.test.eventdispatch.ViewGroupBBB
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:background="@android:color/holo_green_light">
+
+            <com.riven.test.eventdispatch.ViewTestCCC
+                android:id="@+id/view_ccc"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@android:color/holo_orange_light" />
+        </com.riven.test.eventdispatch.ViewGroupBBB>
+
+    </com.riven.test.eventdispatch.ViewGroupAAA>
+</androidx.constraintlayout.widget.ConstraintLayout>
