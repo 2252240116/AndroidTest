@@ -19,9 +19,9 @@ public class ViewTestCCC extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+
+        //如果这里设置了onClickListener事件 会返回true 表示消费事件了 所以递归不到父View的onTouchEvent
         Log.e("touch_test", "===== ViewTestCCC.onTouchEvent ====");
-
-
         return super.onTouchEvent(event);
 //        return false; //表示不处理 会从C的向上传递值B->A-Activity的onTouchEvent
     }
