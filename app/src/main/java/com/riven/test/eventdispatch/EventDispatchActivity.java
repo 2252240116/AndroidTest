@@ -17,20 +17,21 @@ public class EventDispatchActivity extends AppCompatActivity {
 
         View viewCCC = findViewById(R.id.view_ccc);
         //onTouchListener优先级比onTouchEvent高
-        viewCCC.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Log.e("touch_test", "===== ViewTestCCC.[[OnTouchListener]].onTouch() ====");
-                //true 表示消耗事件 不再调用onTouchEvent
-                return false;
-            }
-        });
-        viewCCC.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Log.e("touch_test", "===== ViewTestCCC.<<OnClickListener>>.onClick() ====");
-            }
-        });
+        //先调用onTouchListener，再调用onClickListener和onLongClickListener
+//        viewCCC.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View view, MotionEvent motionEvent) {
+//                Log.e("touch_test", "===== ViewTestCCC.[[OnTouchListener]].onTouch() ====");
+//                //true 表示消耗事件 不再调用onTouchEvent
+//                return false;
+//            }
+//        });
+//        viewCCC.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Log.e("touch_test", "===== ViewTestCCC.<<OnClickListener>>.onClick() ====");
+//            }
+//        });
     }
 
     @Override

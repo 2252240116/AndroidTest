@@ -17,4 +17,10 @@ public class EventDispatchActivity1 extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onUserInteraction() {
+        super.onUserInteraction();
+        //当触摸Activity 走了Action_Down就出触发这个空方法
+        Log.e("==========","调用onUserInteraction");
+    }
 }

@@ -2,6 +2,7 @@ package com.riven.test.eventdispatch;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -50,12 +51,17 @@ public class AnimCardView extends CardView {
                 clickEvent();
                 break;
             }
-            case MotionEvent.ACTION_UP:
-            case MotionEvent.ACTION_CANCEL: {
+            case MotionEvent.ACTION_UP:{
                 Log.e("touch_test", "ACTION_UP===== AnimCardView.dispatchTouchEvent ====");
+                upEvent();
+            }
+            case MotionEvent.ACTION_CANCEL: {
+                //该事件出现情况：1.被拦截，viewGroup会发送一个ACTION_CANCEL事件给到view 2.跳转页面等异常情况
+                Log.e("touch_test", "ACTION_CANCEL===== AnimCardView.dispatchTouchEvent ====");
                 upEvent();
                 break;
             }
+
             default: break;
         }
 
@@ -69,6 +75,7 @@ public class AnimCardView extends CardView {
      * true:事件被消费，进一步理解就是Action_Down被消费，只有Action_Down被消费，我们才能捕获到Action_Move等等
      *
      */
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.e("touch_test", "===== AnimCardView.onTouchEvent ====");

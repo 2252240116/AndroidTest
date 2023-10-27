@@ -1,5 +1,6 @@
 package com.riven.test.eventdispatch;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -8,6 +9,11 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 
+/**
+ * View并不支持多指处理
+ * ViewGroup默认支持（TouchTarget）
+ * View不能嵌套View
+ */
 public class ViewTestCCC extends View {
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
@@ -17,6 +23,7 @@ public class ViewTestCCC extends View {
         return super.dispatchTouchEvent(event);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     public boolean onTouchEvent(MotionEvent event) {
 
