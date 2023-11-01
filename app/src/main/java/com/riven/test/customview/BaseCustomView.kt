@@ -48,6 +48,10 @@ class BaseCustomView : View {
 //        canvas?.save()
         //回滚画板到上次保存的状态
 //        canvas?.restore()
+        //画板的操作都是基于原点操作，第三个参数用来控制原点的偏移
+//        canvas?.scale(0.5f,0.5f,200f,100f);
+//        canvas?.rotate(50f,100f,0f);
+
         //绘制画布底色
         canvas?.drawColor(Color.RED)
         //画点
