@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.riven.test.customview.BaseCustomView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.riven.test.customview.PieView
+        android:background="@color/black"
+        android:id="@+id/pieview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>

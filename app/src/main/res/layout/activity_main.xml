@@ -32,6 +32,14 @@
                 android:gravity="center"
                 android:text="MotionEvent处理" />
 
+            <TextView
+                android:id="@+id/base_custom_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:text="BaseCustomView" />
+
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

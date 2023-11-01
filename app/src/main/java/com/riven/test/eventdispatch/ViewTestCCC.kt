@@ -1,54 +1,48 @@
-package com.riven.test.eventdispatch;
+package com.riven.test.eventdispatch
 
-import android.annotation.SuppressLint;
-import android.content.Context;
-import android.graphics.Canvas;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-
-import androidx.annotation.Nullable;
+import android.view.MotionEvent
+import android.annotation.SuppressLint
+import android.content.Context
+import android.graphics.Canvas
+import android.util.AttributeSet
+import android.util.Log
+import android.view.View
+import android.view.View.MeasureSpec
 
 /**
  * View并不支持多指处理
  * ViewGroup默认支持（TouchTarget）
  * View不能嵌套View
  */
-public class ViewTestCCC extends View {
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent event) {
-
-        Log.e("touch_test", "===== ViewTestCCC.dispatchTouchEvent ====");
-
-        return super.dispatchTouchEvent(event);
+class ViewTestCCC : View {
+    override fun dispatchTouchEvent(event: MotionEvent): Boolean {
+        Log.e("touch_test", "===== ViewTestCCC.dispatchTouchEvent ====")
+        return super.dispatchTouchEvent(event)
     }
 
     @SuppressLint("ClickableViewAccessibility")
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
+    override fun onTouchEvent(event: MotionEvent): Boolean {
 
         //如果这里设置了onClickListener事件 会返回true 表示消费事件了 所以递归不到父View的onTouchEvent
-        Log.e("touch_test", "===== ViewTestCCC.onTouchEvent ====");
-        return super.onTouchEvent(event);
-//        return false; //表示不处理 会从C的向上传递值B->A-Activity的onTouchEvent
+        Log.e("touch_test", "===== ViewTestCCC.onTouchEvent ====")
+        return super.onTouchEvent(event)
+        //        return false; //表示不处理 会从C的向上传递值B->A-Activity的onTouchEvent
     }
 
-    public ViewTestCCC(Context context) {
-        super(context);
-    }
+    constructor(context: Context?) : super(context)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
+    constructor(
+        context: Context?,
+        attrs: AttributeSet?,
+        defStyleAttr: Int,
+        defStyleRes: Int
+    ) : super(context, attrs, defStyleAttr, defStyleRes)
 
-    public ViewTestCCC(Context context, @Nullable AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    public ViewTestCCC(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    public ViewTestCCC(Context context, @Nullable AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 
     /**
      * 这int两个字表示宽高和各自方向的测量模式合成的值
@@ -59,15 +53,13 @@ public class ViewTestCCC extends View {
      * EXACTLY	01	表示父控件已经确切的指定了子View的大小。
      * AT_MOST	10	表示子View具体大小没有尺寸限制，但是存在上限，上限一般为父View大小。
      */
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+    override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         //如果改变了View宽高，不要调用这行代码。需要调用setMeasuredDimension(widthsize,heightsize);
-        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int widthsize = MeasureSpec.getSize(widthMeasureSpec);      //取出宽度的确切数值
-        int widthmode = MeasureSpec.getMode(widthMeasureSpec);      //取出宽度的测量模式
-
-        int heightsize = MeasureSpec.getSize(heightMeasureSpec);    //取出高度的确切数值
-        int heightmode = MeasureSpec.getMode(heightMeasureSpec);    //取出高度的测量模式
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec)
+        val widthsize = MeasureSpec.getSize(widthMeasureSpec) //取出宽度的确切数值
+        val widthmode = MeasureSpec.getMode(widthMeasureSpec) //取出宽度的测量模式
+        val heightsize = MeasureSpec.getSize(heightMeasureSpec) //取出高度的确切数值
+        val heightmode = MeasureSpec.getMode(heightMeasureSpec) //取出高度的测量模式
     }
 
     /**
@@ -78,10 +70,8 @@ public class ViewTestCCC extends View {
      * @param oldw
      * @param oldh
      */
-    @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
     }
 
     /**
@@ -92,14 +82,11 @@ public class ViewTestCCC extends View {
      * @param right 右侧距离父View左侧的距离
      * @param bottom 底部距离父View顶部的距离
      */
-    @Override
-    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
-        super.onLayout(changed, left, top, right, bottom);
-
+    override fun onLayout(changed: Boolean, left: Int, top: Int, right: Int, bottom: Int) {
+        super.onLayout(changed, left, top, right, bottom)
     }
 
-    @Override
-    protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
+    override fun onDraw(canvas: Canvas) {
+        super.onDraw(canvas)
     }
 }

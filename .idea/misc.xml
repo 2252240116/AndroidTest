@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_base_custom_view.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_event_dispatch.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_event_dispatch1.xml" value="0.225" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_main.xml" value="0.536" />
@@ -18,7 +19,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.536" />
+        <option name="scale" value="0.22395833333333334" />
       </ProjectState>
     </option>
   </component>
