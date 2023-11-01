@@ -5,15 +5,13 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import android.graphics.drawable.PictureDrawable
 import android.util.AttributeSet
 import android.view.View
 
 
 /**
- * Function:
- * Author Name: Riven.zhang
- * Date: 2023/11/1
- * Copyright © 2006-2021 高顿网校, All Rights Reserved.
+ * Path绘制：https://github.com/GcsSloop/AndroidNote/blob/master/CustomView/Advance/%5B05%5DPath_Basic.md
  */
 class BaseCustomView : View {
     private val mPaint: Paint = Paint()
@@ -106,6 +104,8 @@ class BaseCustomView : View {
         //useCenter   // 是否使用中心 使用了中心点之后绘制出来类似于一个扇形(true)，
         // 而不使用中心点(false)则是圆弧起始点和结束点之间的连线加上圆弧围成的图形
         canvas?.drawArc(rectF2, 0f, 90f, true, mPaint2)
+
+
     }
 
 }

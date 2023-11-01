@@ -17,6 +17,8 @@ class BaseCustomViewActivity : Activity() {
         setContentView(R.layout.activity_base_custom_view)
         pieview.setData(arrayListOf(PieData("aaaaa",50f),PieData("aaaaa",10f),PieData("aaaaa",25f),PieData("aaaaa",15f)))
         pieview.setStartAngle(270)
+
+
     }
 
 }

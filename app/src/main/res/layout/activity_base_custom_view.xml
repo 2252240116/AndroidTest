@@ -8,9 +8,14 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <com.riven.test.customview.PieView
-        android:background="@color/black"
-        android:id="@+id/pieview"
-        android:layout_width="100dp"
-        android:layout_height="100dp"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <com.riven.test.customview.PieView
+            android:background="@color/black"
+            android:id="@+id/pieview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
