@@ -23,5 +23,10 @@
             android:src="@mipmap/ic_launcher"
             android:layout_width="50dp"
             android:layout_height="50dp"/>
+        <com.riven.test.customview.AutoLineLayout
+            android:id="@+id/container"
+            android:background="@color/purple_500"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
