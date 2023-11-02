@@ -108,4 +108,11 @@ class BaseCustomView : View {
 
     }
 
+//    override fun computeScroll() {
+//        super.computeScroll()
+//        if(mScroller.computeScrollOffset()){
+//            scrollTo(mScroller.getCurrX(), mScroller.getCurrY());
+//            postInvalidate();
+//        }
+//    }
 }

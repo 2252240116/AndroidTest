@@ -17,5 +17,11 @@
             android:id="@+id/pieview"
             android:layout_width="100dp"
             android:layout_height="100dp"/>
+        <com.riven.test.customview.MoveView
+            android:id="@+id/moveview"
+            android:layout_margin="10dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.appcompat.widget.LinearLayoutCompat>
