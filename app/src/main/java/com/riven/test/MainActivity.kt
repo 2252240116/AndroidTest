@@ -24,5 +24,6 @@ class MainActivity : AppCompatActivity() {
         base_custom_view.setOnClickListener {
             startActivity(Intent(MainActivity@this, BaseCustomViewActivity::class.java));
         }
+
     }
 }

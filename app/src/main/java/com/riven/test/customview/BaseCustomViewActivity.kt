@@ -1,10 +1,12 @@
 package com.riven.test.customview
 
+import android.animation.ValueAnimator
 import android.app.Activity
 import android.graphics.Color
 import android.os.Bundle
 import android.view.Gravity
 import android.view.View
+import android.view.WindowManager
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -52,8 +54,8 @@ class BaseCustomViewActivity : Activity() {
                     LinearLayout.LayoutParams.WRAP_CONTENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
                 ).apply {
-                    leftMargin = 20
-                    rightMargin = 15
+                    leftMargin = 10
+                    rightMargin = 10
                     bottomMargin = 40
                 }
             }.also {
@@ -63,6 +65,27 @@ class BaseCustomViewActivity : Activity() {
                 container?.addView(it)
             }
             index++
+        }
+    }
+
+    /**
+     * 让activity窗口快速变暗
+     */
+    fun dimBackGround(from: Float, to: Float) {
+        ValueAnimator.ofFloat(from, to).apply {
+            duration = 500
+            addUpdateListener {
+                var params: WindowManager.LayoutParams = window.attributes
+                params.alpha = it.animatedValue as Float
+                window.attributes = params
+            }
+        }.start()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        pieview.setOnClickListener {
+            dimBackGround(1.0f,0.5f)
         }
     }
 

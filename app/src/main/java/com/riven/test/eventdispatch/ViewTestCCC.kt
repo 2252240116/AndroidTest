@@ -88,5 +88,8 @@ class ViewTestCCC : View {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+//        post {
+//
+//        }
     }
 }
