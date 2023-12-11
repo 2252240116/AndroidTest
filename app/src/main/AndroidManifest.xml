@@ -25,6 +25,7 @@
         <activity android:name=".eventdispatch.EventDispatchActivity"/>
         <activity android:name=".eventdispatch.EventDispatchActivity1"/>
         <activity android:name=".customview.BaseCustomViewActivity"/>
+        <activity android:name=".coroutine.CoroutineActivity"/>
     </application>
 
 </manifest>

@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_base_custom_view.xml" value="0.22395833333333334" />
+        <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_coroutine.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_event_dispatch.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_event_dispatch1.xml" value="0.225" />
-        <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
         <entry key="..\:/Users/Gaodun/Desktop/androidtest/app/src/main/res/layout/activity_scrolltextview.xml" value="0.3375" />
       </map>
     </option>

@@ -3,6 +3,7 @@ package com.riven.test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.riven.test.coroutine.CoroutineActivity
 import com.riven.test.customview.BaseCustomViewActivity
 import com.riven.test.eventdispatch.EventDispatchActivity
 import com.riven.test.eventdispatch.EventDispatchActivity1
@@ -25,5 +26,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(MainActivity@this, BaseCustomViewActivity::class.java));
         }
 
+        coroutine.setOnClickListener {
+            startActivity(Intent(MainActivity@this, CoroutineActivity::class.java));
+        }
     }
 }

@@ -38,14 +38,15 @@
                 android:layout_height="50dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:text="BaseCustomView" />
+                android:text="基础自定义控件" />
 
             <TextView
+                android:id="@+id/coroutine"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textColor="@color/black"
                 android:gravity="center"
-                android:text="" />
+                android:text="协程" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
