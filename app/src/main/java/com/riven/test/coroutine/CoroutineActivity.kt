@@ -78,7 +78,8 @@ class CoroutineActivity :AppCompatActivity(){
         }
         //协程原理
         tv_coroutine_principle.setOnClickListener {
-            MainScope().launch {
+//            start = CoroutineStart.LAZY, context = Dispatchers.Unconfined
+            MainScope().launch() {
                 testCor()
             }
         }
@@ -98,11 +99,13 @@ class CoroutineActivity :AppCompatActivity(){
         suspend方法返回值是个Any，标志函数有没有被挂起。(因为可能返回是枚举、"no suspend"、null所以定义为Any)
         testCor()方法内部会调用invokeSuspend()方法,invokeSuspend嵌套testCor()方法
 
-        内部有两个字段label(状态机，可理解为每一个supsend方法是一个case状态）result(协程返回值）
+        内部维护有两个字段label(状态机，可理解为每一个supsend方法是一个case状态）result(协程返回值）
         当执行一个伪supsend方法，会重新走一遍Switch切换到下一个状态机
 
         他们公用同一个Continuation实例(轻量级）
         协程完全由开发者管理，不涉及操作系统的调度和切换，因此高效
+
+        子线程往主线程切换依靠HandlerContext(子持有父协程体)，而子线程切换依赖线程池
      */
     private suspend fun testCor() {
         // 从主线程切到子线程（协程的挂起）从子线程切回主线程（协程的恢复resume)
